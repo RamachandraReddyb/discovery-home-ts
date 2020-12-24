@@ -1,19 +1,19 @@
 import React from 'react';
-import LeftNav from '../../molecules/navmenu';
+import NavMenu from '../../molecules/navmenu';
+import MenuItems from '../../templates/navmenu';
 
 import './styles.css';
-import navmenu from '../../templates/navmenu';
 
-class Main extends React.Component {
+class LeftNav extends React.Component {
 
     state = {
         show: false
     }
 
     toggleNav = () => {
-        const mySidenav = document.getElementById("mySidenav");
-        const main = document.getElementById("main");
-        console.log(mySidenav.offsetWidth);
+        let mySidenav: any = document.getElementById("mySidenav");
+        let main: any = document.getElementById("main");
+        
         if (mySidenav.offsetWidth === 100) {
             mySidenav.style.width = '250px';
             main.style.marginLeft = '250px';
@@ -29,14 +29,11 @@ class Main extends React.Component {
         return (
             <React.Fragment>
                 <div id="mySidenav" className="sidenav">
-                    {/* <div>
-                        <a href="#" className="closebtn" onClick={this.toggleNav}>&times;</a>
-                    </div>                     */}
                     <div className="center">
                         <img src={'https://www.w3schools.com/howto/img_avatar.png'} alt="Avatar" className="avatar" onClick={this.toggleNav} />
                     </div>
                     <div className="vertical-center">
-                        <LeftNav menuItems={navmenu} textShow={this.state.show}/>
+                        <NavMenu menuItems={MenuItems} textShow={this.state.show}/>
                     </div>
                 </div>
             </React.Fragment>
@@ -44,4 +41,4 @@ class Main extends React.Component {
     }
 }
 
-export default Main;
+export default LeftNav;

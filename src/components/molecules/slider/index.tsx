@@ -1,6 +1,10 @@
 import React from 'react';
 
-class Slider extends React.Component {
+type myProps = {
+    images : string[];
+}
+
+class Slider extends React.Component<myProps> {
 
     renderedList = () => {
         return this.props.images.map((image, index) => {

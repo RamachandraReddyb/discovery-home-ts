@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from '../../atoms/title';
 
-export default () => {
+const HeadBlock = () => {
     return (
         <React.Fragment>
             <div className="header-title">
@@ -15,3 +15,5 @@ export default () => {
         </React.Fragment>
     );
 }
+
+export default HeadBlock;

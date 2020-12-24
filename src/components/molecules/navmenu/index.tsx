@@ -1,13 +1,25 @@
 import React from 'react';
-import Icon from '../../atoms/icon';
+import Icon from '../../atoms/icon/index';
 import './style.css';
 
-export default ({ menuItems, textShow }) => {
+type propsTypes = {
+    menuItems: Array<menu>;
+    textShow: Boolean;
+}
 
-    const list = menuItems.map(({text, icon, id}) => {
+interface menu {
+    text : string;
+    icon: string;
+    id: number;
+}
+
+const NavMenu = ({ menuItems, textShow } : propsTypes) => {
+
+    let list: any = menuItems.map(({text, icon, id}: menu) => {
         return (
             <li key={id} style={{ textAlign : textShow ? 'left' : 'center'}}>
                 <Icon 
+                    style={{}}
                     image={icon}
                     alt="home"
                     classNames={id === 1 ? 'active' : ''}
@@ -17,9 +29,7 @@ export default ({ menuItems, textShow }) => {
         );
     });
 
-    return (
-        <ul>
-            { list }
-        </ul>
-    )
+    return <ul> { list } </ul>;
 }
+
+export default NavMenu;

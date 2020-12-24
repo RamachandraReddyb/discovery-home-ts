@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import Main from '../components/templates/main/index';
+import Main from './templates/main/index';
 
 class App extends React.Component {
     render () {

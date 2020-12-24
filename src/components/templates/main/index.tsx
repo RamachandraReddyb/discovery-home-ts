@@ -1,7 +1,7 @@
 import React from 'react';
-import LeftNav from '../../organisms/leftnav';
-import Header from '../../organisms/header';
-import Footer from '../../organisms/footer';
+import LeftNav from '../../organisms/leftnav/index';
+import Header from '../../organisms/header/index';
+import Footer from '../../organisms/footer/index';
 
 class Main extends React.Component {
     render () {
