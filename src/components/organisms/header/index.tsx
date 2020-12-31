@@ -4,7 +4,6 @@ import FeatureImage from '../../templates/images/TLC_feature.png';
 import shows from '../../templates/shows';
 import HeadBlock from '../../molecules/headblock';
 import Slider from '../../molecules/slider';
-import Title from '../../atoms/title';
 
 class Header extends React.Component {
     
@@ -12,8 +11,7 @@ class Header extends React.Component {
         return shows.map(({ headings, images, id }) => {
             return (
                 <div key={id}>
-                    <Title  titleText={headings} classNames="header-text" />
-                    <Slider images={images}/>
+                    <Slider headings={headings} images={images}/>
                 </div>
             );
         })

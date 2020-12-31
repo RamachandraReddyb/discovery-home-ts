@@ -1,7 +1,9 @@
 import React from 'react';
+import Title from '../../atoms/title';
 
 type myProps = {
     images : string[];
+    headings: string[];
 }
 
 class Slider extends React.Component<myProps> {
@@ -14,9 +16,12 @@ class Slider extends React.Component<myProps> {
 
     render () {
         return (
-            <div className="site">
-                { this.renderedList() }
-            </div>
+            <React.Fragment>
+                <Title  titleText={this.props.headings} classNames="header-text" />
+                <div className="site">
+                    { this.renderedList() }
+                </div>
+            </React.Fragment>
         );
     }
 }
