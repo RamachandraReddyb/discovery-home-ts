@@ -1,7 +1,7 @@
 import React from 'react';
 
 type titleProps = {
-    titleText: string[];
+    titleText: string;
     classNames: string;
 };
 

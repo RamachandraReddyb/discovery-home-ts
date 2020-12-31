@@ -3,7 +3,7 @@ import Title from '../../atoms/title';
 
 type myProps = {
     images : string[];
-    headings: string[];
+    headings: string;
 }
 
 class Slider extends React.Component<myProps> {
